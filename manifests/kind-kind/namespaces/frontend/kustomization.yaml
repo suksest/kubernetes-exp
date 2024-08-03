@@ -4,4 +4,4 @@ namespace: frontend
 
 resources:
   - namespace.yaml
-  # - landingpage
+  - landingpage
