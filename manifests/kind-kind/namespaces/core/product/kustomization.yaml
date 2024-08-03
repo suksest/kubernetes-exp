@@ -4,3 +4,12 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - services.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: product-config
+    literals:
+      - APP_VERSION=v1.0
+      - APP_DESCRIPTION=application for product
