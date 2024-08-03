@@ -1,20 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
-  namespace: default
+  name: product
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: product
   template:
     metadata:
       labels:
-        app: myapp
+        app: product
     spec:
       containers:
-      - name: myapp
+      - name: product
         image: nginx:alpine
         resources:
           limits:
